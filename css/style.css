@@ -1,0 +1,1031 @@
+/* Reset geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* INÍCIO NAVBAR */
+.navbar-custom {
+  background-color: #9d0c0c;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-custom.transparent {
+  background-color: rgba(157, 12, 12, 0.8);
+  transition: background-color 0.3s ease;
+}
+
+body {
+  padding-top: 70px;
+}
+
+.navbar a, .phrase {
+  color: white !important;
+}
+
+.navbar-toggler-icon {
+  background-color: white;
+}
+
+.nav-link {
+  color: white;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #e30613;
+}
+
+/* Ajuste para alinhar o logo e a frase mais à esquerda */
+.container {
+  max-width: 100%; /* Remover limite de largura */
+  padding-left: 30px; /* Ajuste do padding para aproximar à esquerda */
+}
+
+.navbar-brand {
+  margin-left: 0; /* Remove qualquer margem extra */
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.pipe {
+  color: white;
+  padding: 0 10px;
+  font-weight: 400;
+}
+
+.navbar-brand img {
+  height: 70px;
+}
+
+.phrase {
+  margin-left: 20px;
+  font-size: 1.2rem;
+}
+/* FIM NAVBAR */
+
+
+/* INICIO HERO SECTION */
+
+.left-image {
+  background-image: url('../img/hero-section\ 2.jpg'); /* Caminho da sua imagem */
+  background-size: cover; /* Faz a imagem cobrir toda a div */
+  background-position: center; /* Centraliza a imagem */
+  width: 700px; /* Largura da imagem à esquerda */
+  height: 400px; /* Altura igual à altura do banner */
+  position: absolute; /* Para que fique na mesma posição do banner */
+  top: 0; /* Alinha no topo */
+  left: 0; /* Alinha à esquerda */
+  z-index: 2; /* Fica abaixo das outras camadas */
+}
+
+
+.banner {
+  width: 100%;
+  height: 400px;
+  background: 
+  linear-gradient(to left, #9d0c0c 40%, #ffcc00), 
+  url('../img/background-logo.png'); /* Adicione o caminho da sua imagem */
+  display: flex;
+  justify-content: flex-end; /* Alinha os elementos à direita */
+  align-items: center;
+  color: white;
+  padding: 20px;
+  position: relative;
+}
+
+.overlay-image {
+  position: absolute; /* Para posicionar a imagem */
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta a posição para centralizar */
+  width: 100%; /* Ajuste o tamanho conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+  z-index: 1; /* Garante que a imagem fique acima do gradiente */
+  opacity: 0.1; /* Ajusta a opacidade, se necessário */
+}
+
+/* Estilos da seção de texto */
+.banner-content {
+  max-width: 90%; /* Largura máxima da seção de texto em dispositivos menores */
+  text-align: center; /* Alinha o texto ao centro */
+  /* Adiciona um padding no contêiner para manter o alinhamento */
+  padding: 0 100px;
+  z-index: 2; /* Fica acima da imagem */
+}
+
+/* Estilo da primeira frase */
+.banner-content h1 {
+  font-size: 1.98rem;
+  margin: 0;
+  color: white;
+  text-align: center; /* Centraliza a primeira frase */
+}
+
+/* Estilo da palavra Solidariedade */
+.banner-content .solidariedade {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #f8f7f4; 
+  text-align: center; /* Centraliza a palavra Solidariedade */
+}
+
+/* Estilo da frase secundária */
+.banner-content p {
+  font-size: 18px;
+  margin-top: 20px;
+  color: white;
+  text-align: center; /* Centraliza o texto */
+  line-height: 20px;
+}
+
+/* Estilo do botão de CTA */
+.banner-content .cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px; /* Aumenta o padding para tornar o botão maior */
+  background-color: rgba(0, 130, 13, 1); /* Cor verde */
+  color: white;
+  text-decoration: none;
+  font-size: 35px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Sombra na base e direita */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Transição suave */
+  width: 100%; /* Largura total do contêiner pai */
+  max-width: 400px; /* Largura máxima do botão */
+}
+
+/* Efeito hover no botão */
+.cta-button:hover {
+  background-color: #08ab05; /* Verde mais escuro ao passar o mouse */
+  transform: scale(1.1);
+}
+/* FIM HERO SECTION */
+
+/* INICIO PASSO A PASSO */
+.carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #fff;
+  text-align: left; /* Alinha o texto à esquerda */
+  border-radius: 10px;
+  display: flex; /* Alinha a imagem e o conteúdo lado a lado */
+  align-items: center; /* Alinha a imagem e o conteúdo verticalmente */
+  justify-content: space-between; /* Distribui o espaço entre a imagem e o conteúdo */
+}
+
+/* As classes específicas para dispositivos */
+.cell-slide, .pc-slide {
+  display: none; /* Oculta os slides por padrão */
+}
+
+.cell-slide.active, .pc-slide.active {
+  display: flex; /* Exibe os slides ativos */
+}
+
+.carousel-image-celular {
+  margin-left: 20px;
+  margin-right: 20px; /* Espaçamento entre a imagem e o conteúdo */
+  flex-shrink: 0; /* Impede a imagem de encolher */
+  overflow: hidden; /* Oculta a parte da imagem que sai do contêiner */
+  position: relative; /* Necessário para o efeito de zoom */
+}
+
+.carousel-image-celular img {
+  max-width: 250px; /* Define um tamanho máximo para a imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 10px; /* Opcional: adiciona bordas arredondadas */
+  cursor: pointer; /* Cursor muda para indicar que a imagem pode ser clicada */
+}
+
+/* Modal (invisível inicialmente) */
+.modal {
+  display: none; /* Esconde o modal inicialmente */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw; /* O modal cobre 100% da largura da janela */
+  height: 100vh; /* O modal cobre 100% da altura da janela */
+  background-color: rgba(0, 0, 0, 0.9); /* Fundo preto semi-transparente */
+}
+
+/* Estilos da imagem dentro do modal (fullscreen ajustado ao viewport) */
+.modal-content {
+  margin: 0;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain; /* A imagem se ajusta à tela mantendo proporções */
+  background: transparent; /* Garante que o fundo seja transparente */
+}
+
+
+.carousel-image-pc {
+  margin-left: 20px;
+  margin-right: 20px; /* Espaçamento entre a imagem e o conteúdo */
+  flex-shrink: 0; /* Impede a imagem de encolher */
+}
+
+.carousel-image-pc img {
+  max-width: 400px; /* Define um tamanho máximo para a imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 10px; /* Opcional: adiciona bordas arredondadas */
+  cursor: pointer; /* Cursor muda para indicar que a imagem pode ser clicada */
+}
+
+.carousel-info-celular {
+  display: flex;
+  flex-direction: column; /* Empilha os elementos verticalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  flex: 1; /* Faz o contêiner ocupar o restante do espaço disponível */
+}
+.carousel-info-pc {
+  display: flex;
+  flex-direction: column; /* Empilha os elementos verticalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  flex: 1; /* Faz o contêiner ocupar o restante do espaço disponível */
+}
+
+.info-header-celular {
+  display: flex;
+  align-items: center; /* Alinha os retângulos horizontalmente */
+  margin-bottom: 10px; /* Espaço entre o cabeçalho e o conteúdo abaixo */
+}
+
+.info-header-pc {
+  display: flex;
+  align-items: center; /* Alinha os retângulos horizontalmente */
+  margin-bottom: 10px; /* Espaço entre o cabeçalho e o conteúdo abaixo */
+}
+
+.info-number-celular {
+  width: 40px; /* Largura do retângulo vermelho */
+  height: 40px; /* Altura do retângulo vermelho */
+  background-color: #9d0c0c; /* Cor de fundo vermelha */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Faz o retângulo ser circular */
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-right: 10px; /* Espaçamento entre o número e o título */
+}
+
+.info-number-pc {
+  width: 40px; /* Largura do retângulo vermelho */
+  height: 40px; /* Altura do retângulo vermelho */
+  background-color: #9d0c0c; /* Cor de fundo vermelha */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Faz o retângulo ser circular */
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-right: 10px; /* Espaçamento entre o número e o título */
+}
+
+.info-title-celular {
+  background-color: #f7e77c; /* Cor de fundo amarela */
+  color: #9d0c0c;
+  padding: 8px;
+  border-radius: 8px; /* Bordas arredondadas */
+  font-weight: bold;
+  font-size: 22px;
+  width: 760px;
+  font-family: 'Open-sans', sans-serif;
+}
+
+.info-title-pc {
+  background-color: #f7e77c; /* Cor de fundo amarela */
+  color: #9d0c0c;
+  padding: 8px;
+  border-radius: 8px; /* Bordas arredondadas */
+  font-weight: bold;
+  font-size: 22px;
+  width: 610px;
+  font-family: 'Open-sans', sans-serif;
+}
+
+.info-details-celular {
+  margin-right: 60px;
+  height: 300px;
+  background-color: #fff;
+  padding: 17px;
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  color: #333;
+  font-family: 'Open-sans', sans-serif;
+}
+
+.info-details-pc {
+  margin-right: 60px;
+  height: 300px;
+  background-color: #fff;
+  padding: 17px;
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  color: #333;
+  font-family: 'Open-sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.info-details-celular .digite-cnpj {
+  background-color: #9d0c0c;
+  border-radius: 8px;
+  color: white;
+  text-align: left;
+  padding: 14px;
+  width: 310px;
+  font-family: 'Open-sans' sans-serif;
+  font-weight: 300;
+  box-shadow: 0 4px 8px rgba(115, 115, 115, 0.673); /* Sombra */
+}
+
+.info-details-celular .cnpj {
+  font-family: 'Open-sans' sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.info-details-pc .digite-cnpj {
+  background-color: #9d0c0c;
+  border-radius: 8px;
+  color: white;
+  text-align: left;
+  padding: 14px;
+  width: 310px;
+  font-family: 'Open-sans' sans-serif;
+  font-weight: 300;
+  box-shadow: 0 4px 8px rgba(115, 115, 115, 0.673); /* Sombra */
+}
+
+.info-details-pc .cnpj {
+  font-family: 'Open-sans' sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.info-details-celular .peca-cpf {
+  background-color: #9d0c0c;
+  border-radius: 8px;
+  color: white;
+  text-align: left;
+  padding: 14px;
+  width: 310px;
+  font-family: 'Open-sans' sans-serif;
+  font-weight: 300;
+  box-shadow: 0 4px 8px rgba(115, 115, 115, 0.673); /* Sombra */
+  font-family: 'Open-sans' sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.info-details-pc .indeterminado {
+  background-color: #9d0c0c;
+  border-radius: 8px;
+  color: white;
+  padding: 8px;
+  font-family: 'Open-sans' sans-serif;
+  font-weight: 600;
+}
+
+.info-details-pc .peca-cpf {
+  background-color: #9d0c0c;
+  border-radius: 8px;
+  color: white;
+  text-align: left;
+  padding: 14px;
+  width: 310px;
+  font-family: 'Open-sans' sans-serif;
+  font-weight: 300;
+  box-shadow: 0 4px 8px rgba(115, 115, 115, 0.673); /* Sombra */
+  font-family: 'Open-sans' sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.info-details-celular .whatsapp-button {
+  background-color: #9d0c0c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 25px;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(115, 115, 115, 0.673); /* Sombra */
+}
+
+.info-details-celular .whatsapp-button i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Adicionando um efeito de hover */
+.info-details-celular .whatsapp-button:hover {
+  background-color: #7b0909;
+}
+
+.info-details-celular .compartilhe-doacao {
+  background-color: #9d0c0c;
+  border-radius: 8px;
+  color: white;
+  text-align: left;
+  margin-right: 10px;
+  padding: 8px;
+  width: 310px;
+  font-family: 'Open-sans' sans-serif;
+  font-weight: 300;
+  box-shadow: 0 4px 8px rgba(115, 115, 115, 0.673); /* Sombra */
+  font-family: 'Open-sans' sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.info-details-celular .compartilhe-redes {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  margin-top: 20px; /* Espaço extra para mover para baixo */
+}
+
+.info-details-celular .compartilhe-redes a {
+  border-radius: 100px;
+  font-size: 45px; /* Aumenta o tamanho dos ícones */
+  padding: 7px 18px; /* Aumenta o padding ao redor dos ícones */
+  margin-right: 25px; /* Aumenta o espaçamento entre os ícones */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(115, 115, 115, 0.673); /* Sombra */
+  text-decoration: none; /* Remove sublinhado */
+}
+
+.info-details-celular .compartilhe-redes a i {
+  color: white;
+}
+
+.info-details-celular .compartilhe-redes a:nth-child(1) {
+  background-color: #25D366; /* Cor do WhatsApp */
+}
+
+.info-details-celular .compartilhe-redes a:nth-child(2) {
+  background-color: #D44638; /* Cor do Gmail */
+}
+
+
+
+
+.arrows {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  cursor: pointer;
+  color: #9d0c0c;
+  padding: 10px;
+  z-index: 10;
+  border-radius: 8px;
+  height: 150px;
+  align-items: center;
+  
+}
+
+.arrows.left {
+  left: 10px;
+}
+
+.arrows.right {
+  right: 10px;
+}
+
+.arrows.disabled {
+  opacity: 0.5; /* Define a transparência */
+  pointer-events: none; /* Impede o clique */
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tabs span {
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 0 10px;
+  color: #9d0c0c;
+  border-bottom: 2px solid transparent;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+  transition: transform 0.3s, border-bottom 0.3s; /* Adiciona transição suave */
+}
+
+.tabs .active {
+  border-bottom: 2px solid #9d0c0c;
+  font-weight: bold;
+  transform: scale(1.2); /* Aumenta o tamanho do elemento ativo */
+}
+
+
+#como-doar {
+  background: linear-gradient(rgba(222, 221, 221, 0.8) -80%, rgba(255, 255, 255, 0.2));
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  color: #9d0c0c;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+/* FIM PASSO A PASSO */
+
+
+/* INICIO ALUNOS + FORMULARIO PARA AS NF */
+#doacao {
+  position: relative; /* Necessário para posicionar o botão */
+  width: 100%; /* Largura total da seção */
+  height: 600px; /* Ajuste a altura conforme necessário */
+  overflow: hidden; /* Esconde partes da imagem que excedam a área da seção */
+}
+
+.banner-aluno {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-aluno img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem ocupar todo o espaço sem distorcer */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Seção Youtube */
+
+.youtube-section {
+  display: flex;
+  justify-content: space-between;
+  background-color: #4c4c4c;
+  padding: 20px;
+  color: white;
+}
+
+.left-content {
+  max-width: 50%;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-content h6 {
+  color: #F7E77C;
+  margin-bottom: 15px;
+  font-size: 60px;
+  font-family: 'Open-sans' sans-serif;
+  font-weight: bold;
+  padding-top: 40px;
+}
+
+.left-content p {
+  color: white;
+  line-height: 2;
+  font-family: 'Open-sans' sans-serif;
+  font-size: 18px;
+  padding-bottom: 40px;
+}
+
+
+
+.help-image {
+  width: 100%; /* Ajusta a largura conforme necessário */
+  max-width: 800px; /* Largura máxima da imagem */
+  height: auto; /* Mantém a proporção */
+  display: block; /* Para que a imagem seja exibida como um bloco */
+  margin-bottom: 40px;
+}
+
+.help-image-link {
+  display: inline-block; /* Faz com que a área clicável corresponda ao tamanho da imagem */
+}
+
+.help-image-link:hover .help-image {
+  cursor: pointer; /* Muda o cursor para a mãozinha ao passar o mouse */
+}
+
+
+.right-content {
+  max-width: 50%;
+  text-align: center;
+  margin-right: 50px;
+  width: 500px;
+  padding-top: 20px;
+}
+
+.right-content h3 {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  color: #F7E77C;
+}
+
+iframe {
+  width: 100%; /* Largura completa do container à direita */
+  height: 315px; /* Mantendo a altura para preservar a proporção do vídeo */
+  max-width: 900px; /* Aumentando a largura do vídeo */
+  border-radius: 8px;
+}
+
+/* FAQ */
+
+/* .faq-background {
+  background-color: #9d0c0c; 
+  padding: 40px 20px; 
+}
+
+.faq-background h3 {
+  color: white;
+  text-align: center;
+  padding-bottom: 30px;
+
+}
+
+.accordion-container {
+  max-width: 1400px; 
+  margin: 0 auto; 
+}
+
+.accordion-button {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease; 
+  margin-bottom: 5px;
+  
+}
+
+.accordion-button:hover {
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2); 
+} */
+
+/* Projetos */
+
+.projects-section {
+  position: relative;
+  padding: 20px;
+  max-height: 500px; /* Limita a altura da seção */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden; /* Garante que a imagem não ultrapasse a seção */
+  margin-bottom: 20px;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  right: 0; /* Alinha a imagem à direita */
+  width: 50%; /* Define uma largura fixa para a imagem */
+  height: 90%; /* Mantém a altura da seção */
+  background-image: url('../img/sobre-ia3.jpg'); /* Verifique o caminho da imagem */
+  background-size: cover; /* Ajusta a imagem para cobrir toda a altura */
+  background-position: right; /* Alinha a imagem à direita */
+  background-repeat: no-repeat; /* Não repete a imagem */
+  z-index: -1; /* Coloca a imagem atrás dos cards */
+}
+
+.section-title {
+  font-size: 28px;
+  padding-left: 350px;
+  width: 100%;
+  margin-bottom: 30px;
+  color: #9d0c0c; /* Cor do título */
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  max-width: 800px;
+  width: 100%;
+  margin-left: 80px;
+}
+
+.project {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  padding-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  width: 100%;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.project-link img {
+  max-width: 80%;
+  height: auto;
+}
+
+.button-container {
+  margin-top: 30px;
+  text-align: center;
+  margin-left: 330px;
+}
+
+.institute-button {
+  background-color: #FF5733;
+  color: white;
+  padding: 12px 60px; /* Aumenta o padding lateral para aumentar a largura */
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  transition: background-color 0.3s;
+  display: inline-block; /* Garante que a largura funcione corretamente */
+}
+
+.institute-button:hover {
+  background-color: #C13E1B;
+}
+
+
+
+
+/* Outro FAQ */
+
+.faq-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #f9f9f9;
+  margin-left: 40px;
+}
+
+.faq {
+  flex: 0 0 70%; /* 70% da largura para o FAQ */
+}
+
+.faq h2 {
+  text-align: center; /* Centraliza o título */
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.faq-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq-column {
+  flex: 0 0 48%; /* 48% da largura para cada coluna */
+}
+
+.faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  background-color: #ffffff; /* Cor padrão dos botões */
+  padding: 10px; /* Aumenta o padding para botões mais largos */
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between; /* Alinha texto à esquerda e ícones à direita */
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra na base e direita */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Transição suave */
+  position: relative; /* Para o posicionamento do fundo da numeração */
+  padding-left: 60px; /* Cria espaço para a numeração à esquerda */
+  margin-left: 10px; /* Move as questões um pouco mais para a direita */
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.faq-question:hover {
+  background-color: #e0e0e0; /* Escurece ao passar o cursor */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o cursor */
+}
+
+.faq-question .number:hover {
+  background-color: #e0e0e0; /* Escurece ao passar o cursor */
+}
+
+.faq-question.active {
+  background-color: #F7E77C; /* Amarelo ao clicar */
+}
+
+.faq-question.active .number {
+  background-color: #9d0c0c; /* Vermelho escuro */
+  color: white; /* Cor do texto em branco */
+  position: absolute; /* Posiciona a numeração no fundo da pergunta */
+  left: 0; /* Alinha à esquerda */
+  top: 0; /* Alinha ao topo */
+  height: 100%; /* Preenche toda a altura do botão */
+  width: 50px; /* Largura fixa para a numeração */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza o texto */
+  border-radius: 5px 0 0 5px; /* Bordas arredondadas apenas à esquerda */
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.number {
+  background-color: #ffffff; /* Cor padrão */
+  color: #9d0c0c; /* Cor do texto */
+  font-weight: bold;
+  font-size: 25px;
+  position: absolute; /* Posiciona a numeração no fundo da pergunta */
+  left: 0; /* Alinha à esquerda */
+  top: 0; /* Alinha ao topo */
+  height: 100%; /* Preenche toda a altura do botão */
+  width: 50px; /* Largura fixa para a numeração */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza o texto */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Transição suave */
+}
+
+.faq-answer {
+  display: none; /* Inicialmente oculto */
+  padding: 10px;
+  background-color: #ffffff; /* Janela branca */
+  border-radius: 5px;
+  margin-top: 5px;
+  max-height: 0; /* Impede a exibição */
+  overflow: hidden; /* Impede a exibição de conteúdo fora do limite */
+  transition: max-height 0.3s ease, padding 0.3s ease; /* Transição suave */
+}
+
+.faq-answer.show {
+  display: block; /* Exibe a resposta */
+  max-height: 200px; /* Altura máxima para a animação */
+  padding: 10px; /* Aplica o padding ao exibir */
+}
+
+.faq-image {
+  flex: 0 0 30%; /* 30% da largura para a imagem */
+  margin-left: 20px; /* Espaçamento à esquerda */
+}
+
+.faq-image img {
+  width: 95%;
+  height: auto; /* Faz a imagem ocupar toda a altura */
+  border-radius: 0; /* Remove as bordas arredondadas */
+}
+
+/* botão de rolagem */
+
+#scrollTopBtn {
+  position: fixed; /* Fixa o botão na tela */
+  bottom: 20px; /* Distância da parte inferior */
+  right: 20px; /* Distância da parte direita */
+  width: 50px; /* Largura do botão */
+  height: 50px; /* Altura do botão */
+  background-color: white; /* Cor de fundo branca */
+  border: none; /* Remover borda */
+  border-radius: 50%; /* Deixa o botão redondo */
+  display: none; /* Oculto por padrão */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra do botão */
+  transition: background-color 0.3s ease;
+  padding-top: 5px;
+}
+
+#scrollTopBtn:hover {
+  background-color: #f0f0f0; /* Cor ao passar o mouse (levemente cinza) */
+}
+
+#scrollTopBtn i {
+  
+  border: solid #9d0c0c; /* Cor da seta */
+  border-width: 0 4px 4px 0; /* Tamanho mais fino da seta */
+  display: block; /* Para que o alinhamento funcione */
+  width: 16px; /* Largura da seta */
+  height: 16px; /* Altura da seta */
+  transform: rotate(-135deg); /* Rotaciona a seta para apontar para cima */
+  margin: auto; /* Centraliza horizontalmente */
+}
+
+/* Footer */
+
+.footer {
+  background-color: #9d0c0c;
+  border-top: 10px solid #F7E77C; /* Contorno grosso no topo */
+  padding: 20px 40px; /* Aumenta as margens laterais */
+  color: white;
+  margin-top: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Centraliza verticalmente os itens */
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  margin-left: 70px; /* Move a frase e ícones para a direita */
+}
+
+.social-media p {
+  margin-right: 20px; /* Espaço entre a frase e os ícones */
+  padding-top: 14px;
+}
+
+.icons a {
+  margin-left: 10px; /* Espaço entre os ícones */
+  color: white; /* Cor dos ícones */
+  font-size: 20px; /* Tamanho dos ícones */
+  transition: color 0.3s;
+}
+
+.icons a:hover {
+  color: #F7E77C; /* Cor ao passar o mouse */
+}
+
+.transformation {
+  display: flex;
+  align-items: center;
+  margin-right: 70px; /* Move a frase e o botão para a esquerda */
+}
+
+.transformation p {
+  margin-right: 20px; /* Espaço entre a frase e o botão */
+  padding-top: 14px;
+}
+
+.btn {
+  background-color: #F7E77C; /* Cor do botão amarelo */
+  color: #000; /* Cor do texto do botão */
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra do botão */
+}
+
+.btn:hover {
+  background-color: #edd53e; /* Cor do botão ao passar o mouse */
+  color: #000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra do botão */
+}
+
+
+
+
+
+
+
+
+
+
